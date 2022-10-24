@@ -1,0 +1,4 @@
+money_USA  = float(input(" Enter number USA money: "))
+exchange_rate = float(input("Enter number of exchange rate: "))
+money_VNA = money_USA * exchange_rate
+print(" Money USA -> VNA:  ",money_VNA)
