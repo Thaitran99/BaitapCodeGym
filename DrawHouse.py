@@ -1,0 +1,102 @@
+import turtle
+import math
+turtle.Screen().bgcolor("cyan")
+h = turtle.Turtle()
+h.penup()
+h.goto(-300,0)
+h.pendown()
+
+# Draw House
+#1.
+h.fillcolor("blue")
+h.begin_fill()
+for x in range (2):
+     h.fd(150)
+     h.rt(90)
+     h.fd(200)
+     h.rt(90)
+h.end_fill()
+#2.
+h.fillcolor("Magenta")
+h.begin_fill()
+for x in range (3) :
+    h.fd(150)
+    h.left(120)
+h.end_fill()
+#3.
+h.penup()
+h.fd(150)
+h.pendown()
+h.fillcolor("orange")
+h.begin_fill()
+h.left(30)
+for x in range (3):
+  h.fd(150)
+  h.left(90)
+h.end_fill()
+#4.
+h.penup()
+h.fd(150)
+h.pendown()
+h.right(30)
+h.fillcolor("yellow")
+h.begin_fill()
+h.fd(200)
+h.left(120)
+h.fd(150)
+h.left(60)
+h.fd(200)
+h.left(120)
+h.fd(150)
+h.end_fill()
+#5. Draw Sun
+h.right(30)
+h.penup()
+h.goto (300,300) 
+h.pendown()
+h.fillcolor("yellow")
+h.begin_fill()
+for x in range (8):
+    if x%2 == 0:    
+        h.right(90)
+        h.fd(50)
+        h.bk(50)
+        h.left(90)
+        h.circle(100,45)
+    else:
+        h.right(90)
+        h.fd(20)
+        h.bk(20)
+        h.left(90)
+        h.circle(100,45)       
+h.end_fill()
+#6. Draw tree
+h.right(90)
+h.fillcolor("green")
+
+for x in range (3):
+      h.begin_fill()
+      h.penup()
+      h.goto( 400,int( (x-1)*math.sqrt(math.pow(100,2)-math.pow(50,2))))
+      h.pendown()         
+      h.left(150)
+      h.fd(100)
+      h.left(120)
+      h.fd(100)
+      h.left(120)
+      h.fd(100)
+      h.right(30)
+      h.end_fill()
+h.penup()
+h.goto( 400,int( (-2)*math.sqrt(math.pow(100,2)-math.pow(50,2))))
+h.pendown()
+h.left(90)
+h.fd(25)
+h.right(90)
+h.fillcolor("brown")
+h.begin_fill()
+for x in range (4):
+     h.right(90)
+     h.fd(50)
+h.end_fill()    
+turtle.done()
